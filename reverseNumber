@@ -1,0 +1,10 @@
+// Method
+    public static int reverseNumber (int number) {
+        int reverse = 0;
+        while (number != 0){ // 1221 -> 122 -> 12 -> 1 -> 0
+            int last = number % 10; // 1 -> 2 -> 2 -> 1
+            number = number / 10; // 122 -> 12 -> 1 -> 0.1
+            reverse = reverse * 10 + last; // 0*10+1=1 -> 1*10+2=12 -> 12*10+2=122 -> 122*10+1=1221
+        }
+        return reverse;
+    }
